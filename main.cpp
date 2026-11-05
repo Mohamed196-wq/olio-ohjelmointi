@@ -3,14 +3,10 @@
 #include <stdexcept>
 
 using namespace std;
-
-// Laskee ja tulostaa summan
 void calcSum(int a, int b)
 {
     cout << "Summa: " << a + b << endl;
 }
-
-// Laskee ja tulostaa osamaaran
 void calcDiv(int a, int b)
 {
     if (b == 0)
@@ -23,14 +19,10 @@ void calcDiv(int a, int b)
         cout << "Osamaara: " << static_cast<float>(a) / b << endl;
     }
 }
-
-// Palauttaa summan
 int retSum(int a, int b)
 {
     return a + b;
 }
-
-// Palauttaa osamaaran
 float retDiv(int a, int b)
 {
     if (b == 0)
@@ -50,15 +42,9 @@ int main()
 
     cout << "Sana toinen luku: ";
     cin >> b;
-
-    // Kutsutaan funktioita
     calcSum(a, b);
     calcDiv(a, b);
-
-    // Tulostetaan palautettu summa
     cout << "Palautettu summa: " << retSum(a, b) << endl;
-
-    // Kasitellaan mahdollinen jakovirhe
     try
     {
         float result = retDiv(a, b);
